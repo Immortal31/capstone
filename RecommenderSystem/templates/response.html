@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Response</title>
+</head>
+<body>
+{{ data.op }}
+{% if data['status'] == 0 %}
+{% for prod in data.op %}
+    <h3>{{ prod }}</h3></br>
+     {% endfor %}
+{% else %}
+User not found
+{% endif %}
+
+</body>
+</html>
